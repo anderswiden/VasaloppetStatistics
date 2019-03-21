@@ -48,6 +48,14 @@ namespace VasaloppetStatistics
             app.UseStaticFiles();
 
             app.UseMvc();
+
+            // TODO Temporary setup for testing purposes
+            var serviceScopeFactory = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>();
+            using (var serviceScope = serviceScopeFactory.CreateScope())
+            {
+                var dbContext = serviceScope.ServiceProvider.GetService<AppDbContext>();
+                dbContext.Database.EnsureCreated();
+            }
         }
     }
 }

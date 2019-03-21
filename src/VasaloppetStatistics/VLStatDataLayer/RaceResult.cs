@@ -16,6 +16,7 @@ namespace VLStatDataLayer
 
         public ICollection<Split> Splits { get; set; }
 
+        public int RaceId { get; set; }
         public Race Race { get; set; }
     }
 }
