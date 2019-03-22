@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VLStatDataLayer
 {
-    class Split
+    public class Split
     {
         public int SplitId { get; set; }
 

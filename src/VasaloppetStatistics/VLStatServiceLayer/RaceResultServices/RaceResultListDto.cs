@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VLStatDataLayer
+namespace VLStatServiceLayer.RaceResultServices
 {
-    public class RaceResult
+    public class RaceResultListDto
     {
         public int RaceResultId { get; set; }
 
@@ -14,9 +14,6 @@ namespace VLStatDataLayer
 
         public string LastName { get; set; }
 
-        public ICollection<Split> Splits { get; set; }
-
-        public int RaceId { get; set; }
-        public Race Race { get; set; }
+        public DateTime FinishTime { get; set; }
     }
 }
